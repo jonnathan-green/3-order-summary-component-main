@@ -1,0 +1,193 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Red Hat Display';
+}
+
+:root{
+    --background-body:hsl(225, 100%, 94%);
+    --button:hsl(221, 92%, 52%);
+    --backgrund-options:hsl(225, 100%, 98%);
+    --gray:hsl(224, 23%, 55%);
+    --font:hsl(223, 47%, 23%);    
+}
+
+body{
+    background: #DFE8FF;
+    
+}
+
+body::before{
+    content: "";
+    background-image: url(/Ejercicio/images/pattern-background-desktop.svg);
+    background-repeat: no-repeat;
+    width: 100vw;
+    height: 71vh;
+    background-size: cover;
+    top: -25vh;
+    position: absolute;
+    z-index: -1;
+}
+
+
+article {
+    width: 20vw;
+    height: 67vh;
+    margin: auto;
+    margin-top: 12vh;
+    border-radius: 20px;
+    background: white;
+    box-shadow: 0px 5px 30px  rgba(22, 15, 15, 0.2);
+}
+
+.top{
+    width: 20vw;
+    border-radius: 20px 20px 0 0 ;
+}
+
+.content {
+    text-align: center;
+}
+
+h1{
+    font-size: 1.5vw;
+    font-weight: 900;
+    margin: 3vh 0 2vh 0;
+    color: var(--font);
+}
+
+.description {
+    font-size: 0.85vw;
+    margin-bottom: 2vw;
+    color: var(--gray);
+}
+
+.options{
+    background: var(--backgrund-options);
+    border-radius: 15px;
+    margin: auto;
+    padding: 1.5vh 0.4vh;
+    width: 16vw;
+    display: grid;
+    grid-template-areas: 
+    "icon plan change"
+    "icon price change";
+}
+
+.icon{
+    grid-area: icon;
+    margin: auto;
+    width: 2.5vw;
+}
+
+.price{
+    grid-area: price;
+    font-size: 0.69vw;
+    color: var(--gray);
+    text-align: left;
+}
+
+a{
+    grid-area: change;
+    margin: auto;
+    font-size: 0.69vw;
+    font-weight: 700;
+    cursor: pointer; 
+}
+
+a:hover{
+    color:#766CF1;
+    text-decoration: none;
+}
+
+b{
+    font-size: 0.79vw;
+    color: var(--font);
+    text-align: left;
+    font-weight: 900;
+}
+
+.send-button{
+    margin-top: 4vh;
+    width: 16vw;
+    height: 4.5vh;
+    border: none;
+    border-radius: 10px;
+    background: var(--button);
+    color: white;
+    font-weight: 700;
+    font-size: 0.6vw;
+    letter-spacing: 0.05vw;
+    cursor:pointer;
+    box-shadow: 0px 10px 40px  rgba(22, 15, 15, 0.3);
+}
+
+.send-button:hover{
+    background: #766CF1;
+}
+
+.cancel{
+    margin-top: 3vh;
+    border: none;
+    background: none;
+    font-weight: 900;
+    color: var(--gray);
+    font-size: 0.7vw;
+    cursor: pointer;
+}
+
+.cancel:hover{
+    color: var(--font);
+}
+
+@media only screen and (max-width: 380px){
+    article{
+        height: 70vh;
+        width: 80vw;
+    }
+
+    .top{
+        width: 80vw;
+    }
+
+    h1{
+        font-size: 6vw;
+    }
+
+    .description{
+        font-size: 3vw;
+    }
+
+    .options{
+        width: 60vw;
+        margin-top: 3.5vh;
+        height: 7vh;
+    }
+
+    .icon{
+        width: 8vw;
+    }
+
+    b{
+        font-size: 3vw;
+    }
+
+    .price {
+        font-size: 2.9vw;
+    }
+
+    a{
+        font-size: 2.9vw;
+    }
+
+    .send-button{
+        width: 60vw;
+        font-size: 2.9vw;
+    }
+
+    .cancel{
+        font-size: 2.9vw;
+    }
+
+}
